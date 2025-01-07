@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --text-color: #ffffff;
+  --main-color: #021a1b;
+  --accent-color: #ff6f61;
+  --correct-color: #4caf50;
+  --wrong-color: #f44336;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.guess {
+  width: 91%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.guess h1,
+.guess h2 {
+  color: var(--text-color);
+}
+
+.guess span {
+  color: var(--accent-color);
+}
+
+.number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+button.correct {
+  background-color: var(--correct-color);
+  color: var(--main-color);
+  cursor: not-allowed;
+}
+
+button.wrong {
+  background-color: var(--wrong-color);
+  cursor: not-allowed;
+}
